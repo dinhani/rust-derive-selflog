@@ -1,0 +1,22 @@
+[package]
+name = "derive-selflog"
+version = "0.1.0"
+edition = "2024"
+description = "Derive that generates methods that log the fields of a struct"
+license = "MIT"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "3", features = ["full"] }
+
+[features]
+tracing = []
+
+[dev-dependencies]
+atomic_float = "1"
+portable-atomic = "1"
+tracing = "0.1"
